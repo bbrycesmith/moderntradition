@@ -82,7 +82,7 @@ h1, h2, h3 {
   gap: 10px;
 }
 .logo-mark img {
-  height: 48px;
+  height: 60px;
   width: auto;
   /* the source PNG has a transparent background, so it sits cleanly on the dark header */
 }
@@ -422,7 +422,7 @@ h1, h2, h3 {
   flex-wrap: wrap;
   gap: 16px;
 }
-.footer-inner .logo-mark img { height: 36px; }
+.footer-inner .logo-mark img { height: 46px; }
 .social-links { display: flex; gap: 16px; }
 .social-links a {
   border: 2px solid rgba(245,242,234,0.3);
