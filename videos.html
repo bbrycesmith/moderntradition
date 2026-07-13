@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Videos — ModernTradition_23</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rokkitt:wght@500;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo-mark"><img src="logo_reversed_240.png" alt="ModernTradition_23 logo"><span class="logo-handle">_23</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <nav class="site-nav" id="siteNav">
+        <a href="index.html" class="nav-link">01 · Home</a>
+        <a href="about.html" class="nav-link">02 · About</a>
+        <a href="videos.html" class="nav-link active">03 · Videos</a>
+        <a href="merch.html" class="nav-link">04 · Merch</a>
+        <a href="https://youtube.com/@ModernTradition_23" class="nav-cta" target="_blank" rel="noopener">Watch a Hunt</a>
+      </nav>
+    </div>
+    <div class="tag-strip" aria-hidden="true"></div>
+  </header>
+
+  <section class="section wrap">
+    <div class="section-head">
+      <h2>All Hunts</h2>
+      <span class="section-num">03 · VIDEOS</span>
+    </div>
+
+    <!-- Filters match the real game they hunt — try clicking these
+         once the site is live. Logic lives in script.js -->
+    <div class="filter-bar" id="filterBar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="turkey">Turkey</button>
+      <button class="filter-btn" data-filter="deer">Deer</button>
+      <button class="filter-btn" data-filter="hog">Hog</button>
+      <button class="filter-btn" data-filter="bowfishing">Bowfishing</button>
+    </div>
+
+    <!-- Real videos, linked out to YouTube. Titles are descriptive
+         placeholders since YouTube blocked the fetch I'd normally use to
+         grab exact titles — swap these for the real ones any time. -->
+    <div class="grid" id="videoGrid">
+      <a class="card" data-category="turkey" href="https://www.youtube.com/watch?v=OgIIQYOKgsE" target="_blank" rel="noopener">
+        <div class="card-thumb"><img src="https://img.youtube.com/vi/OgIIQYOKgsE/hqdefault.jpg" alt="Turkey hunt thumbnail" loading="lazy"><span class="play-badge">▶</span></div>
+        <div class="card-body"><span class="card-tag">Turkey</span><h3>Turkey Hunt</h3></div>
+      </a>
+      <a class="card" data-category="deer" href="https://www.youtube.com/watch?v=N0dWqT981oI" target="_blank" rel="noopener">
+        <div class="card-thumb"><img src="https://img.youtube.com/vi/N0dWqT981oI/hqdefault.jpg" alt="Deer hunt thumbnail" loading="lazy"><span class="play-badge">▶</span></div>
+        <div class="card-body"><span class="card-tag">Deer</span><h3>Alabama Buck Down</h3></div>
+      </a>
+      <a class="card" data-category="hog" href="https://www.youtube.com/watch?v=dNm41cbBiHg" target="_blank" rel="noopener">
+        <div class="card-thumb"><img src="https://img.youtube.com/vi/dNm41cbBiHg/hqdefault.jpg" alt="Hog hunt thumbnail" loading="lazy"><span class="play-badge">▶</span></div>
+        <div class="card-body"><span class="card-tag">Hog</span><h3>Hog Hunt</h3></div>
+      </a>
+      <a class="card" data-category="bowfishing" href="https://www.youtube.com/watch?v=f_7VXllXioY" target="_blank" rel="noopener">
+        <div class="card-thumb"><img src="https://img.youtube.com/vi/f_7VXllXioY/hqdefault.jpg" alt="Bowfishing hunt thumbnail" loading="lazy"><span class="play-badge">▶</span></div>
+        <div class="card-body"><span class="card-tag">Bowfishing</span><h3>Bowfishing Run</h3></div>
+      </a>
+      <a class="card" data-category="deer" href="https://www.youtube.com/watch?v=9s8ncPPlDro" target="_blank" rel="noopener">
+        <div class="card-thumb"><img src="https://img.youtube.com/vi/9s8ncPPlDro/hqdefault.jpg" alt="Deer hunt thumbnail" loading="lazy"><span class="play-badge">▶</span></div>
+        <div class="card-body"><span class="card-tag">Deer</span><h3>Deer Management</h3></div>
+      </a>
+      <a class="card" data-category="hog" href="https://www.youtube.com/watch?v=vNR2oJN0MAY" target="_blank" rel="noopener">
+        <div class="card-thumb"><img src="https://img.youtube.com/vi/vNR2oJN0MAY/hqdefault.jpg" alt="Hog hunt thumbnail" loading="lazy"><span class="play-badge">▶</span></div>
+        <div class="card-body"><span class="card-tag">Hog</span><h3>Hog Hunt</h3></div>
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="tag-strip" aria-hidden="true"></div>
+    <div class="footer-inner">
+      <span class="logo-mark"><img src="logo_reversed_240.png" alt="ModernTradition_23 logo"></span>
+      <div class="social-links">
+        <a href="https://youtube.com/@ModernTradition_23" target="_blank" rel="noopener" aria-label="YouTube">▶</a>
+        <a href="https://www.instagram.com/modern_tradition23" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+        <a href="https://www.tiktok.com/@Modern_tradition_23" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+      </div>
+      <span class="footer-note">© 2026 ModernTradition_23. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
