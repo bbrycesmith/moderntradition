@@ -88,20 +88,16 @@ function formatSubscriberCount(n) {
 updateSubscriberCount();
 
 // ---- 4. Camo backdrop parallax ----
-// The leaves layer drifts a little faster than the bark layer behind
-// it, so the two visually separate as you scroll. Skipped entirely
+// The leaves layer drifts slightly as you scroll. Skipped entirely
 // for anyone with "reduce motion" set.
-const camoBark = document.querySelector('.camo-backdrop-bark');
 const camoLeaves = document.querySelector('.camo-backdrop-leaves');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if (camoBark && camoLeaves && !prefersReducedMotion) {
+if (camoLeaves && !prefersReducedMotion) {
   let ticking = false;
 
   function updateCamoParallax() {
-    const yBark = Math.min(window.scrollY * 0.04, 25);
     const yLeaves = Math.min(window.scrollY * 0.08, 50);
-    camoBark.style.transform = `translateY(${-yBark}px)`;
     camoLeaves.style.transform = `translateY(${-yLeaves}px)`;
     ticking = false;
   }
