@@ -1,9 +1,10 @@
 // ============================================
 // MODERNTRADITION_23 — shared JavaScript
-// Three small features live here:
+// Four small features live here:
 // 1. Mobile menu toggle (works on every page)
 // 2. Video category filter (only runs on videos.html)
 // 3. Live subscriber count (only runs on about.html, once an API key is set)
+// 4. Camo backdrop parallax (works on every page)
 // ============================================
 
 // ---- 1. Mobile menu toggle ----
@@ -85,3 +86,32 @@ function formatSubscriberCount(n) {
 }
 
 updateSubscriberCount();
+
+// ---- 4. Camo backdrop parallax ----
+// The leaves layer drifts a little faster than the bark layer behind
+// it, so the two visually separate as you scroll. Skipped entirely
+// for anyone with "reduce motion" set.
+const camoBark = document.querySelector('.camo-backdrop-bark');
+const camoLeaves = document.querySelector('.camo-backdrop-leaves');
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (camoBark && camoLeaves && !prefersReducedMotion) {
+  let ticking = false;
+
+  function updateCamoParallax() {
+    const yBark = Math.min(window.scrollY * 0.04, 25);
+    const yLeaves = Math.min(window.scrollY * 0.08, 50);
+    camoBark.style.transform = `translateY(${-yBark}px)`;
+    camoLeaves.style.transform = `translateY(${-yLeaves}px)`;
+    ticking = false;
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(updateCamoParallax);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  updateCamoParallax();
+}
