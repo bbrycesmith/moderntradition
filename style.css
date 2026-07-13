@@ -203,7 +203,7 @@ h1, h2, h3 {
 @media (prefers-reduced-motion: reduce) { .blaze-dot { animation: none; } }
 @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
 
-.hero-logo { width: 150px; margin: 0 auto 26px; }
+.hero-logo { width: 260px; margin: 0 auto 26px; }
 
 .species-row {
   display: flex;
